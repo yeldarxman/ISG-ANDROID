@@ -7,5 +7,10 @@
     </string>
     <string name="hello_world" >Hello Yeldar!
     </string>
+    <string name="kaz_subjects" >Пәндер
+    </string>
+
+    <string name="kaz_math" >Математика
+    </string>
 
 </resources>
