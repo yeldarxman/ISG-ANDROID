@@ -18,7 +18,7 @@
            android:id="@+id/kk_button"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:background="@drawable/kk_lang_button"
+           android:background="@drawable/kk_button_background"
            android:layout_gravity="center_horizontal"
            android:layout_marginBottom="20dp"
            ></Button>
@@ -27,7 +27,7 @@
             android:id="@+id/ru_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ru_lang_button"
+            android:background="@drawable/ru_button_background"
             android:layout_gravity="center_horizontal"
             android:layout_y="@dimen/activity_vertical_margin"
             android:layout_alignLeft="@+id/kk_button"
