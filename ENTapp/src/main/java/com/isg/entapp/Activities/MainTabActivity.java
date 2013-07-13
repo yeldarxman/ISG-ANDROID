@@ -91,11 +91,11 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
         mTabHost = (TabHost)findViewById(android.R.id.tabhost);
         mTabHost.setup();
         TabInfo tabInfo = null;
-        MainTabActivity.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab1").setIndicator("Tab 1"), ( tabInfo = new TabInfo("Tab1", TestSubjectSelection.class, args)));
+        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab1").setIndicator("Tab 1"), ( tabInfo = new TabInfo("Tab1", TestSubjectSelection.class, args)));
         this.mapTabInfo.put(tabInfo.tag, tabInfo);
-        MainTabActivity.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab2").setIndicator("Tab 2"), ( tabInfo = new TabInfo("Tab2", TestSubjectSelection.class, args)));
+        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab2").setIndicator("Tab 2"), ( tabInfo = new TabInfo("Tab2", TestSubjectSelection.class, args)));
         this.mapTabInfo.put(tabInfo.tag, tabInfo);
-        MainTabActivity.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab3").setIndicator("Tab 3"), ( tabInfo = new TabInfo("Tab3", TestSubjectSelection.class, args)));
+        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab3").setIndicator("Tab 3"), ( tabInfo = new TabInfo("Tab3", TestSubjectSelection.class, args)));
         this.mapTabInfo.put(tabInfo.tag, tabInfo);
         // Default to first tab
         this.onTabChanged("Tab1");
@@ -109,7 +109,7 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
      * @param tabSpec
      * @param tabInfo
      */
-    private static void addTab(MainTabActivity activity, TabHost tabHost, TabHost.TabSpec tabSpec, TabInfo tabInfo) {
+    private void addTab(MainTabActivity activity, TabHost tabHost, TabHost.TabSpec tabSpec, TabInfo tabInfo) {
         // Attach a Tab view factory to the spec
         tabSpec.setContent(activity.new TabFactory(activity));
         String tag = tabSpec.getTag();
@@ -119,9 +119,9 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
         // initial state is that a tab isn't shown.
         tabInfo.fragment = activity.getSupportFragmentManager().findFragmentByTag(tag);
         if (tabInfo.fragment != null && !tabInfo.fragment.isDetached()) {
-            FragmentTransaction ft = activity.getSupportFragmentManager().beginTransaction();
-            ft.detach(tabInfo.fragment);
-            ft.commit();
+            FragmentTransaction fragmentTransaction = activity.getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.detach(tabInfo.fragment);
+            fragmentTransaction.commit();
             activity.getSupportFragmentManager().executePendingTransactions();
         }
 
@@ -142,8 +142,7 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
             }
             if (newTab != null) {
                 if (newTab.fragment == null) {
-                    newTab.fragment = Fragment.instantiate(this,
-                            newTab.clss.getName(), newTab.args);
+                    newTab.fragment = Fragment.instantiate(this, newTab.clss.getName(), newTab.args);
                     fragmentTransaction.add(android.R.id.tabcontent, newTab.fragment, newTab.tag);
                 } else {
                     fragmentTransaction.attach(newTab.fragment);

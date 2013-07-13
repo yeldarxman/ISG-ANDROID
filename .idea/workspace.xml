@@ -57,19 +57,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_support_v4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_support_v42.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENTapp/src/main/main.iml" afterPath="$PROJECT_DIR$/ENTapp/src/main/main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Activities/MainTabActivity.java" afterPath="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Activities/MainTabActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Fragments/Test/TestSubjectSelection.java" afterPath="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Fragments/Test/TestSubjectSelection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_list_item.xml" afterPath="$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_selection_fragment.xml" afterPath="$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_selection_fragment.xml" />
     </list>
     <ignored path="isg-ent-android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,17 +72,19 @@
     <file path="/subjects.java" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373659187974" ignored="false" />
     <file path="/Dummy.txt" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373721857184" ignored="false" />
     <file path="/kaz_subjects.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373649574608" ignored="false" />
-    <file path="/test_subject_list_item.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373711355073" ignored="false" />
+    <file path="/test_subject_list_item.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373733099722" ignored="false" />
     <file path="/test_subject_list_item_bg.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373710656942" ignored="false" />
-    <file path="/fragment.java" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373709900292" ignored="false" />
-    <file path="/MainTabActivity.java" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373719514969" ignored="false" />
+    <file path="/fragment.java" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373727998436" ignored="false" />
+    <file path="/MainTabActivity.java" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373728364019" ignored="false" />
     <file path="/MainTabActivityLayout.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373718478640" ignored="false" />
-    <file path="/TestSubjectSelection.java" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373717751132" ignored="false" />
-    <file path="/test_subject_selection_fragment.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373718801284" ignored="false" />
+    <file path="/TestSubjectSelection.java" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373730776550" ignored="false" />
+    <file path="/test_subject_selection_fragment.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373732598256" ignored="false" />
     <file path="/main_tab_activity.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373719745725" ignored="false" />
     <file path="/main_activity.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373721073664" ignored="false" />
     <file path="/kk_button_background.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373721622486" ignored="false" />
     <file path="/ru_button_background.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373721697838" ignored="false" />
+    <file path="/TestSubjectSelectionListAdapter.java" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373731002054" ignored="false" />
+    <file path="/list_item_background_gray.xml" changelist="2bacceb9-2434-49ab-a51b-f1b0f8d02ac7" time="1373733065282" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,10 +150,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Activities/MainActivity.java">
+      <file leaf-file-name="TestSubjectSelectionListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/ListAdapters/Test/TestSubjectSelectionListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="1" selection-start="1467" selection-end="1467" vertical-scroll-proportion="0.7177419">
+            <state line="38" column="65" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,33 +161,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_activity.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/layout/main_activity.xml">
+      <file leaf-file-name="progress_bar.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable/progress_bar.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="61" selection-start="794" selection-end="794" vertical-scroll-proportion="-6.0740743">
+            <state line="15" column="66" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_subject_selection_fragment.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_selection_fragment.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="15" selection-start="551" selection-end="551" vertical-scroll-proportion="0.5873494">
               <folding />
             </state>
           </provider>
           <provider editor-type-id="android-designer">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ru_button_background.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable/ru_button_background.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="40" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kk_button_background.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable/kk_button_background.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="284" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -216,14 +200,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ENTapp/build/manifests/debug/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_list_item.xml" />
-        <option value="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/TestSubjects.java" />
-        <option value="$PROJECT_DIR$/ENTapp/src/main/res/layout/test/test_subject_selection.xml" />
-        <option value="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Fragments/Test/TestSubjectSelection.java" />
-        <option value="$PROJECT_DIR$/ENTapp/src/main/res/layout/MainTabActivityLayout.xml" />
         <option value="$PROJECT_DIR$/ENTapp/src/main/res/layout/main_tab_activity_layout.xml" />
-        <option value="$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_selection_fragment.xml" />
         <option value="$PROJECT_DIR$/ENTapp/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/MainTabActivity.java" />
         <option value="$PROJECT_DIR$/ENTapp/src/main/res/layout/main_tab_activity.xml" />
@@ -232,8 +209,18 @@
         <option value="$PROJECT_DIR$/ENTapp/src/main/res/drawable/kk_button_background.xml" />
         <option value="$PROJECT_DIR$/ENTapp/src/main/res/drawable/ru_button_background.xml" />
         <option value="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Activities/MainTabActivity.java" />
+        <option value="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Fragments/Test/TestSubjectSelection.java" />
+        <option value="$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/ListAdapters/Test/TestSubjectSelectionListAdapter.java" />
+        <option value="$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_selection_fragment.xml" />
+        <option value="$PROJECT_DIR$/ENTapp/src/main/res/drawable/list_item_background_gray.xml" />
+        <option value="$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_list_item.xml" />
+        <option value="$PROJECT_DIR$/ENTapp/src/main/res/drawable/progress_bar.xml" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="3" />
@@ -314,7 +301,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -333,60 +320,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="isg-ent-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="isg-ent-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="isg-ent-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Activities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -520,7 +453,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -576,7 +509,7 @@
       <workItem from="1373486567731" duration="2145000" />
       <workItem from="1373557410237" duration="11182000" />
       <workItem from="1373649157531" duration="12154000" />
-      <workItem from="1373708870623" duration="11538000" />
+      <workItem from="1373708870623" duration="19863000" />
     </task>
     <task id="LOCAL-00001" summary=" - Created Main Tab Bar Activity&#10; - Added selected state images for kk and ru buttons&#10;">
       <created>1373721866776</created>
@@ -586,35 +519,35 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37019000" />
+    <option name="totallyTimeSpent" value="45344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="22" width="1275" height="714" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872254" sideWeight="0.8400673" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872254" sideWeight="0.8400673" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23759153" sideWeight="0.6734007" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872254" sideWeight="0.7407407" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872254" sideWeight="0.7407407" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39625713" sideWeight="0.6734007" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32659933" sideWeight="0.50040686" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2441009" sideWeight="0.2962963" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15993266" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25084174" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30471382" sideWeight="0.49959317" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25084174" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25925925" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24979658" sideWeight="0.6952862" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29292107" sideWeight="0.6734007" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295362" sideWeight="0.6734007" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24247356" sideWeight="0.6734007" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32659933" sideWeight="0.49959317" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -706,96 +639,12 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/layout/main_activity.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/main.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable-hdpi/selection_indicator.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="39" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ENTapp/build/manifests/debug/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable/test_subject_list_item_bg_patch.9.png">
       <provider editor-type-id="images">
         <state />
       </provider>
       <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_list_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="76" selection-start="397" selection-end="397" vertical-scroll-proportion="0.2866242">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#408#426#0" expanded="true" />
-            <element signature="e#525#543#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Fragments/Test/TestSubjectSelection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="77" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.9435484">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_selection_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="54" selection-start="313" selection-end="313" vertical-scroll-proportion="0.26086956">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Activities/MainTabActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="67" selection-start="5331" selection-end="5331" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/layout/main_tab_activity.xml">
@@ -808,6 +657,13 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable/kk_button_background.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="284" vertical-scroll-proportion="0.0">
@@ -815,16 +671,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable/ru_button_background.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="40" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/layout/main_activity.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="61" selection-start="794" selection-end="794" vertical-scroll-proportion="-6.0740743">
+        <state line="20" column="61" selection-start="794" selection-end="794" vertical-scroll-proportion="0.78125">
           <folding />
         </state>
       </provider>
@@ -832,13 +681,102 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="910" selection-end="910" vertical-scroll-proportion="1.0948905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="1" selection-start="1467" selection-end="1467" vertical-scroll-proportion="0.7177419">
+        <state line="51" column="1" selection-start="1467" selection-end="1467" vertical-scroll-proportion="0.74452555">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Activities/MainTabActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="9" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable/list_item_background_gray.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="69" selection-start="297" selection-end="297" vertical-scroll-proportion="0.18203883">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable/ru_button_background.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="284" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable/test_subject_list_item_bg_selected_patch.9.png">
+      <provider editor-type-id="images">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="ninepatcheditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="65" selection-start="314" selection-end="314" vertical-scroll-proportion="0.27108434">
+          <folding>
+            <element signature="e#867#885#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/Fragments/Test/TestSubjectSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="24" selection-start="3339" selection-end="3339" vertical-scroll-proportion="2.2580645">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1181#1189#0" expanded="true" />
+            <element signature="e#1984#2307#0" expanded="true" />
+            <element signature="e#2280#2281#0" expanded="true" />
+            <element signature="e#2761#2778#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/java/com/isg/entapp/ListAdapters/Test/TestSubjectSelectionListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="65" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/drawable/progress_bar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="66" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ENTapp/src/main/res/layout/test_subject_selection_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="15" selection-start="551" selection-end="551" vertical-scroll-proportion="0.5873494">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>
