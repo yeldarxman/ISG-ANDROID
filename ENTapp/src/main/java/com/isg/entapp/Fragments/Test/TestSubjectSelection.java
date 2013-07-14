@@ -3,20 +3,19 @@ package com.isg.entapp.Fragments.Test;
 /**
  * Created by yeldar on 13.07.13.
  */
-import android.content.Context;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-import java.util.*;
 
 import com.isg.entapp.ListAdapters.Test.TestSubjectSelectionListAdapter;
 import com.isg.entapp.R;
+
+import java.util.ArrayList;
 
 public class TestSubjectSelection extends Fragment {
 
