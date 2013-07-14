@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.isg.entapp.ListAdapters.Test.TestSubjectSelectionListAdapter;
+//import com.isg.entapp.ListAdapters.Test.TestSubjectSelectionListAdapter;
 import com.isg.entapp.R;
 
 import java.util.ArrayList;
@@ -36,8 +36,8 @@ public class TestSubjectSelection extends Fragment {
 
 
         //final StableArrayAdapter adapter = new StableArrayAdapter(getActivity(), R.layout.test_subject_list_item, list);
-        final TestSubjectSelectionListAdapter adapter = new TestSubjectSelectionListAdapter(getActivity(), values);
-        listview.setAdapter(adapter);
+       // final TestSubjectSelectionListAdapter adapter = new TestSubjectSelectionListAdapter(getActivity(), values);
+        //listview.setAdapter(adapter);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

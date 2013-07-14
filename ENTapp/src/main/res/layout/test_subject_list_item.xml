@@ -4,7 +4,7 @@
           android:orientation="horizontal"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:background="@drawable/list_item_background_gray">
+         >
 
     <LinearLayout
         android:layout_height="match_parent"
@@ -32,7 +32,7 @@
             android:layout_marginBottom="4dp"/>
         <ProgressBar
             android:id="@+id/progress_bar"
-            android:progressDrawable="@drawable/progress_bar"
+           
             android:progress="50"
             android:max="100"
             android:secondaryProgress="0"
