@@ -3,14 +3,13 @@ package com.isg.entapp.Fragments.Test;
 /**
  * Created by yeldar on 13.07.13.
  */
-import android.content.Context;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.sql.SQLException;
@@ -22,6 +21,8 @@ import com.isg.entapp.Models.Test;
 import com.isg.entapp.Models.Topic;
 import com.isg.entapp.R;
 import com.isg.entapp.Utilities.Database;
+
+import java.util.ArrayList;
 
 public class TestSubjectSelection extends Fragment {
     private Database database;
@@ -40,7 +41,6 @@ public class TestSubjectSelection extends Fragment {
         listview.setAdapter(adapter);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
             public void onItemClick(AdapterView<?> parent, final View view,
                                     int position, long id) {
