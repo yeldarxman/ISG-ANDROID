@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.isg.entapp">
+
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="16"/>
+
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/MyTheme">
+        <activity android:label="@string/app_name" android:name="com.isg.entapp.Activities.MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="Subjects" android:name="com.isg.entapp.Activities.MainTabActivity"/>
+        <activity android:name="com.isg.entapp.Activities.TestTopicSelectionActivity"/>
+
+    </application>
+
+</manifest>
