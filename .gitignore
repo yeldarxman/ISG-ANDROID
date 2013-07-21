@@ -1,2 +1,4 @@
-out
+out/production
+out/res-cache
 .idea
+.gitignore
