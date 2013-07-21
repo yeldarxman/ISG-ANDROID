@@ -20,6 +20,7 @@ public class TestSubjectSelectionListAdapter extends ArrayAdapter<Subject> {
     private final Activity context;
     private Subject[] subjects;
 
+    //view holder class
     static class ViewHolder {
         public TextView subjectName;
         public TextView percentage;
