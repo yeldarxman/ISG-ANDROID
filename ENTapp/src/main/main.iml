@@ -15,9 +15,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="android-support-v4" level="project" />
     <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="module" module-name="debug" />
     <orderEntry type="module" module-name="buildConfig" />
     <orderEntry type="module" module-name="r" />
-    <orderEntry type="module" module-name="debug" />
   </component>
 </module>
 
