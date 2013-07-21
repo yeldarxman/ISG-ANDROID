@@ -3,3 +3,9 @@ out/res-cache
 out
 .idea
 .gitignore
+*.classpath
+*.project
+*.settings
+.gradle
+/build
+.DS_Store
