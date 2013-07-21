@@ -1,1 +1,3 @@
-out/production/main/com
+out/production
+out/res-cache
+.idea
