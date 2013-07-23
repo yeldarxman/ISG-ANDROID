@@ -94,12 +94,14 @@ public class Database extends OrmLiteSqliteOpenHelper {
 
     /**
      * Insets new subject object into the database
+     *
+     *
      * @param subject
      * @return
      */
     public int addSubject(Subject subject)
     {
-        RuntimeExceptionDao<Subject, String> dao = subjectRuntimeDAO();
+        RuntimeExceptionDao dao = subjectRuntimeDAO();
         int i = dao.create(subject);
         return i;
     }
