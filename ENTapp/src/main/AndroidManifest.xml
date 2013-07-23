@@ -27,6 +27,7 @@
                   android:label="Subjects"/>
         <activity android:name=".Activities.TestTopicSelectionActivity"/>
 
+
     </application>
 
 </manifest>

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabHost.TabContentFactory;
 
+import com.isg.entapp.Fragments.Test.ReadSubjectSelection;
 import com.isg.entapp.Fragments.Test.TestSubjectSelection;
 import com.isg.entapp.R;
 
@@ -94,7 +95,7 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
         TabInfo tabInfo = null;
         this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab1").setIndicator("Tab 1"), ( tabInfo = new TabInfo("Tab1", TestSubjectSelection.class, args)));
         this.mapTabInfo.put(tabInfo.tag, tabInfo);
-        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab2").setIndicator("Tab 2"), ( tabInfo = new TabInfo("Tab2", TestSubjectSelection.class, args)));
+        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab2").setIndicator("Tab 2"), ( tabInfo = new TabInfo("Tab2", ReadSubjectSelection.class, args)));
         this.mapTabInfo.put(tabInfo.tag, tabInfo);
         this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab3").setIndicator("Tab 3"), ( tabInfo = new TabInfo("Tab3", TestSubjectSelection.class, args)));
         this.mapTabInfo.put(tabInfo.tag, tabInfo);
