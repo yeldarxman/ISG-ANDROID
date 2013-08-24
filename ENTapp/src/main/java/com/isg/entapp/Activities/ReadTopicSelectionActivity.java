@@ -9,7 +9,7 @@ import com.isg.entapp.R;
 /**
  * Created by 1 on 7/24/13.
  */
-public class ReadTopicSelectionList extends Activity {
+public class ReadTopicSelectionActivity extends Activity {
     String [] read_topics ;
 
     @Override
