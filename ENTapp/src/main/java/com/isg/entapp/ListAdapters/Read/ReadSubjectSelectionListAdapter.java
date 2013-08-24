@@ -1,20 +1,16 @@
-package com.isg.entapp.ListAdapters.Test.Read;
+package com.isg.entapp.ListAdapters.Read;
 
 /**
  * Created by yeldar on 13.07.13.
  */
 
 import android.app.Activity;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.isg.entapp.Models.Subject;
 import com.isg.entapp.R;
 
 public class ReadSubjectSelectionListAdapter extends ArrayAdapter<String> {

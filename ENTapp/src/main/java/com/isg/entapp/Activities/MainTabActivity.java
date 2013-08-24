@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabHost.TabContentFactory;
 
-import com.isg.entapp.Fragments.Test.ReadSubjectSelection;
+import com.isg.entapp.Fragments.Read.ReadSubjectSelection;
 import com.isg.entapp.Fragments.Test.TestSubjectSelection;
 import com.isg.entapp.R;
 
