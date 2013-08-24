@@ -1,4 +1,4 @@
-package com.isg.entapp.Fragments.Test;
+package com.isg.entapp.Fragments.Read;
 
 /**
  * Created by yeldar on 13.07.13.
@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.isg.entapp.ListAdapters.Test.Read.ReadSubjectSelectionListAdapter;
+import com.isg.entapp.ListAdapters.Read.ReadSubjectSelectionListAdapter;
 import com.isg.entapp.R;
 
 public class ReadSubjectSelection extends Fragment {
