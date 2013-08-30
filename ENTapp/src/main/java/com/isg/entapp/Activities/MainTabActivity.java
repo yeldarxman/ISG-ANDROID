@@ -5,6 +5,8 @@ package com.isg.entapp.Activities;
  */
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -13,11 +15,15 @@ import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabHost.TabContentFactory;
 
+import com.isg.entapp.Fragments.More.Settings;
 import com.isg.entapp.Fragments.Read.ReadSubjectSelection;
 import com.isg.entapp.Fragments.Test.TestSubjectSelection;
 import com.isg.entapp.R;
+import com.isg.entapp.Utilities.Constants;
+
 
 import java.util.HashMap;
+import java.util.Locale;
 
 /**
  * @author yeldar
@@ -29,7 +35,7 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
     private HashMap mapTabInfo = new HashMap();
     private TabInfo mLastTab = null;
 
-    private class TabInfo {
+    public class TabInfo {
         private String tag;
         private Class clss;
         private Bundle args;
@@ -40,6 +46,13 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
             this.args = args;
         }
 
+        public String getTag() {
+            return tag;
+        }
+
+        public void setTag(String tag) {
+            this.tag = tag;
+        }
     }
 
     class TabFactory implements TabContentFactory {
@@ -69,6 +82,12 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
      */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Step 0: set Language
+        SharedPreferences settings = getSharedPreferences(Constants.PREFS_NAME, 0);
+        String language = settings.getString("language", "kk");
+        setLanguage(language);
+        this.getActionBar().setTitle(getResources().getString(R.string.test));
+
         // Step 1: Inflate layout
         setContentView(R.layout.main_tab_activity);
         // Step 2: Setup TabHost
@@ -89,16 +108,19 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
     /**
      * Step 2: Setup TabHost
      */
-    private void initialiseTabHost(Bundle args) {
+    public void initialiseTabHost(Bundle args) {
         mTabHost = (TabHost)findViewById(android.R.id.tabhost);
         mTabHost.setup();
         TabInfo tabInfo = null;
-        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab1").setIndicator("Tab 1"), ( tabInfo = new TabInfo("Tab1", TestSubjectSelection.class, args)));
-        this.mapTabInfo.put(tabInfo.tag, tabInfo);
-        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab2").setIndicator("Tab 2"), ( tabInfo = new TabInfo("Tab2", ReadSubjectSelection.class, args)));
-        this.mapTabInfo.put(tabInfo.tag, tabInfo);
-        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("Tab3").setIndicator("Tab 3"), ( tabInfo = new TabInfo("Tab3", TestSubjectSelection.class, args)));
-        this.mapTabInfo.put(tabInfo.tag, tabInfo);
+        String test = getResources().getString(R.string.test);
+        String read = getResources().getString(R.string.read);
+        String settings = getResources().getString(R.string.settings);
+        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("test").setIndicator(test), ( tabInfo = new TabInfo(test, TestSubjectSelection.class, args)));
+        this.mapTabInfo.put("test", tabInfo);
+        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("read").setIndicator(read), ( tabInfo = new TabInfo(read, ReadSubjectSelection.class, args)));
+        this.mapTabInfo.put("read", tabInfo);
+        this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("settings").setIndicator(settings), ( tabInfo = new TabInfo(settings, Settings.class, args)));
+        this.mapTabInfo.put("settings", tabInfo);
         // Default to first tab
         this.onTabChanged("Tab1");
         //
@@ -151,10 +173,42 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
                 }
             }
 
+
             mLastTab = newTab;
             fragmentTransaction.commit();
+            this.getActionBar().setTitle(mLastTab.tag);
+            System.out.println(mLastTab.tag);
             this.getSupportFragmentManager().executePendingTransactions();
         }
     }
 
+    public void onResume(){
+        super.onResume();
+    }
+
+    public void setLanguage(String lg){
+        Locale locale = new Locale(lg);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+    }
+
+    public TabHost getmTabHost() {
+        return mTabHost;
+    }
+
+    public void setmTabHost(TabHost mTabHost) {
+        this.mTabHost = mTabHost;
+    }
+
+    public HashMap getMapTabInfo() {
+        return mapTabInfo;
+    }
+
+    public void setMapTabInfo(HashMap mapTabInfo) {
+        this.mapTabInfo = mapTabInfo;
+    }
 }

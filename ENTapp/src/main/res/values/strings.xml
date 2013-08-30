@@ -10,7 +10,31 @@
     <string name="kaz_subjects" >Пәндер
     </string>
 
-    <string name="kaz_math" >Математика
+    <string name="kaz_math" >Math
     </string>
+    <string name="til" >Language
+    </string>
+    <array name="language">
+        <item >Kazakh</item>
+        <item>Russian</item>
+    </array>
+    <string name="dialog_erase_results" >Clear my results?
+    </string>
+    <string name="ok" >Ok
+    </string>
+    <string name="cancel" >Cancel
+    </string>
+
+    <array name="settings_array">
+        <item >Clear my results</item>
+        <item>Change language</item>
+        <item>About us</item>
+        <item></item>
+    </array>
+
+
+    <string name="test">Test</string>
+    <string name="read">Read</string>
+    <string name="settings">Settings</string>
 
 </resources>

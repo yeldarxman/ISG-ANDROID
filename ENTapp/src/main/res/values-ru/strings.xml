@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" >ENTapp
+    </string>
+    <string name="action_settings" >Settings
+    </string>
+    <string name="hello_world" >Hello Yeldar!
+    </string>
+    <string name="kaz_subjects" >Предметы
+    </string>
+
+    <string name="kaz_math" >Математика
+    </string>
+    <string name="til" >Язык
+    </string>
+    <array name="language">
+        <item >Казахский</item>
+        <item>Русский</item>
+    </array>
+    <string name="dialog_erase_results" >Сбросить мои результаты
+    </string>
+    <string name="ok" >Да
+    </string>
+    <string name="cancel" >Нет
+    </string>
+
+    <array name="settings_array">
+        <item >Сбросить результаты</item>
+        <item>Поменять язык</item>
+        <item>О нас</item>
+        <item></item>
+    </array>
+
+    <array name="read_subjects_array">
+        <item >Математика</item>
+        <item>Казахский язык</item>
+        <item>История Казахстана</item>
+        <item>Английский язык</item>
+    </array>
+
+    <string name="test">Тесты</string>
+    <string name="read">Читать</string>
+    <string name="settings">Прочие</string>
+
+
+</resources>

@@ -4,6 +4,7 @@ package com.isg.entapp.Fragments.Read;
  * Created by yeldar on 13.07.13.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,6 +13,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.isg.entapp.Activities.MainTabActivity;
+
+import com.isg.entapp.Activities.ReadTopicSelectionActivity;
 import com.isg.entapp.ListAdapters.Read.ReadSubjectSelectionListAdapter;
 import com.isg.entapp.R;
 
@@ -49,23 +53,6 @@ public class ReadSubjectSelection extends Fragment {
     }
 
     public void loadSubjects(){
-        subject = new String[11];
-
-        for(int i=0; i<11; i++){
-            subject[i] = new String();
-
-        }
-
-        subject[0]=("Math");
-        subject[1]=("Kaz history");
-        subject[2]=("Kaz language");
-        subject[3]=("Rus language");
-        subject[4]=("Eng language");
-        subject[5]=("Physics");
-        subject[6]=("Chemistry");
-        subject[7]=("Biology");
-        subject[8]=("Geography");
-        subject[9]=("World history");
-        subject[10]=("Kaz literature");
+        subject = getResources().getStringArray((R.array.read_subjects_array));
     }
 }
