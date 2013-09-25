@@ -9,27 +9,40 @@
             android:targetSdkVersion="16" />
 
     <application
+
             android:allowBackup="true"
             android:icon="@drawable/icon"
-            android:label="@string/app_name"
-            android:theme="@style/MyTheme">
+            android:theme="@style/MyTheme"
+            android:label="@string/app_name">
         <activity
-                android:name=".Activities.MainActivity"
-                android:label="@string/app_name" >
-
+            android:name=".Activities.RedirectingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            </activity>
+        <activity android:name=".Activities.MainActivity">
         </activity>
 
-        <activity android:name=".Activities.MainTabActivity"
-                  android:label="Subjects"/>
-        <activity android:name=".Activities.TestTopicSelectionActivity"
-                  android:label="Subjects"/>
+        <activity android:name=".Activities.MainTabActivity"/>
+        <activity android:name=".Activities.TestTopicSelectionActivity"/>
         <activity android:name=".Activities.ReadTopicSelectionActivity"
-                  android:label="@string/kaz_subjects"/>
+         android:parentActivityName="com.isg.entapp.Activities.MainTabActivity" >
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.isg.entapp.Activities.MainTabActivity" />
+                ></activity>
+        <activity android:name=".Activities.PdfReaderActivity"/>
+        <activity android:name=".Activities.PdfAsImageShowActivity"/>
 
+        <dependency>
+            <groupId>com.actionbarsherlock</groupId>
+            <artifactId>actionbarsherlock</artifactId>
+            <version>4.4.0</version>
+            <type>apklib</type>
+        </dependency>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     </application>
 

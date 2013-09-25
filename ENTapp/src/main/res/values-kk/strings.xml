@@ -37,12 +37,20 @@
         <item>Қазақ тілі</item>
         <item>Қазақстан тарихы</item>
         <item>Ағылшын тілі</item>
+
     </array>
 
     <string name="test">Тесттер</string>
     <string name="read">Оқу</string>
     <string name="settings">Қосымша</string>
 
+    <array name="read_topics_array">
+        <item>Тақырып1</item>
+        <item>Тақырып2</item>
+        <item>Тақырып3</item>
+        <item>Тақырып4</item>
+        <item></item>
+    </array>
 
 
 </resources>

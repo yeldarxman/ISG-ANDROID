@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabHost.TabContentFactory;
 
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.isg.entapp.Fragments.More.Settings;
 import com.isg.entapp.Fragments.Read.ReadSubjectSelection;
 import com.isg.entapp.Fragments.Test.TestSubjectSelection;
@@ -29,11 +31,12 @@ import java.util.Locale;
  * @author yeldar
  *
  */
-public class MainTabActivity extends FragmentActivity implements TabHost.OnTabChangeListener {
+public class MainTabActivity extends SherlockFragmentActivity implements TabHost.OnTabChangeListener {
 
     private TabHost mTabHost;
     private HashMap mapTabInfo = new HashMap();
     private TabInfo mLastTab = null;
+    private boolean backButtonPressed = false;
 
     public class TabInfo {
         private String tag;
@@ -77,32 +80,21 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
         }
 
     }
-    /** (non-Javadoc)
-     * @see android.support.v4.app.FragmentActivity#onCreate(android.os.Bundle)
-     */
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Step 0: set Language
         SharedPreferences settings = getSharedPreferences(Constants.PREFS_NAME, 0);
         String language = settings.getString("language", "kk");
         setLanguage(language);
-        this.getActionBar().setTitle(getResources().getString(R.string.test));
-
+        System.out.println("Language = "+language);
+        //getSupportActionBar().setTitle();
         // Step 1: Inflate layout
         setContentView(R.layout.main_tab_activity);
         // Step 2: Setup TabHost
         initialiseTabHost(savedInstanceState);
-        if (savedInstanceState != null) {
-            mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab")); //set the tab as per the saved state
-        }
-    }
 
-    /** (non-Javadoc)
-     * @see android.support.v4.app.FragmentActivity#onSaveInstanceState(android.os.Bundle)
-     */
-    protected void onSaveInstanceState(Bundle outState) {
-        outState.putString("tab", mTabHost.getCurrentTabTag()); //save the tab selected
-        super.onSaveInstanceState(outState);
     }
 
     /**
@@ -121,6 +113,8 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
         this.mapTabInfo.put("read", tabInfo);
         this.addTab(this, this.mTabHost, this.mTabHost.newTabSpec("settings").setIndicator(settings), ( tabInfo = new TabInfo(settings, Settings.class, args)));
         this.mapTabInfo.put("settings", tabInfo);
+
+        getSupportActionBar().setTitle(((TabInfo)this.mapTabInfo.get("test")).getTag());
         // Default to first tab
         this.onTabChanged("Tab1");
         //
@@ -176,14 +170,32 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
 
             mLastTab = newTab;
             fragmentTransaction.commit();
-            this.getActionBar().setTitle(mLastTab.tag);
+            getSupportActionBar().setTitle(mLastTab.tag);
             System.out.println(mLastTab.tag);
             this.getSupportFragmentManager().executePendingTransactions();
         }
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(backButtonPressed==false){
+            //SharedPreferences
+            SharedPreferences settings = getSharedPreferences(Constants.PREFS_NAME, 0);
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putInt("tab", mTabHost.getCurrentTab());
+            // Commit the edits!
+            editor.commit();
+        }
+    }
+
+    @Override
     public void onResume(){
+        mTabHost.setCurrentTab(getSharedPreferences(Constants.PREFS_NAME, 0)
+                .getInt("tab", 0));
         super.onResume();
+        backButtonPressed = false;
+        System.out.println("onResume is called  ");
     }
 
     public void setLanguage(String lg){
@@ -211,4 +223,19 @@ public class MainTabActivity extends FragmentActivity implements TabHost.OnTabCh
     public void setMapTabInfo(HashMap mapTabInfo) {
         this.mapTabInfo = mapTabInfo;
     }
+
+    @Override
+    public void onBackPressed() {
+        backButtonPressed = true;
+        //SharedPreferences
+        SharedPreferences settings = getSharedPreferences(Constants.PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putInt("tab", 0);
+        // Commit the edits!
+        editor.commit();
+        super.onBackPressed();
+        System.out.println("Back button pressed");
+        this.finish();
+    }
+
 }

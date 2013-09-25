@@ -43,5 +43,12 @@
     <string name="read">Читать</string>
     <string name="settings">Прочие</string>
 
+    <array name="read_topics_array">
+        <item>Тема1</item>
+        <item>Тема2</item>
+        <item>Тема3</item>
+        <item>Тема4</item>
+        <item></item>
+    </array>
 
 </resources>

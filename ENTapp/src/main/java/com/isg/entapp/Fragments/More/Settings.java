@@ -1,6 +1,7 @@
 package com.isg.entapp.Fragments.More;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,10 +13,12 @@ import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.actionbarsherlock.app.SherlockFragment;
 import com.isg.entapp.Activities.MainTabActivity;
 import com.isg.entapp.Activities.MainTabActivity.*;
 import com.isg.entapp.ListAdapters.More.SettingsListAdapter;
 import com.isg.entapp.R;
+import com.isg.entapp.Utilities.Constants;
 
 import java.util.Locale;
 
@@ -27,7 +30,7 @@ import static java.security.AccessController.getContext;
  */
 
 
-public class Settings extends Fragment {
+public class Settings extends SherlockFragment {
 
     private String[] settingsListItem;
     private ListView listview;
@@ -130,7 +133,7 @@ public class Settings extends Fragment {
         ((TabInfo) (((MainTabActivity) getActivity()).getMapTabInfo().get("read") )).setTag(getResources().getString(R.string.read));
         ((TabInfo) (((MainTabActivity) getActivity()).getMapTabInfo().get("settings") )).setTag(getResources().getString(R.string.settings));
 
-        getActivity().getActionBar().setTitle(getResources().getString(R.string.settings));
+        ((MainTabActivity) getActivity()).getSupportActionBar().setTitle(getResources().getString(R.string.settings));
 
         getActivity().runOnUiThread(new Runnable() {
             @Override
@@ -140,7 +143,12 @@ public class Settings extends Fragment {
             }
         });
 
-        //Tab Bar
 
+        //SharedPreferences
+        SharedPreferences settings = getActivity().getSharedPreferences(Constants.PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("language", lg);
+        // Commit the edits!
+        editor.commit();
     }
 }

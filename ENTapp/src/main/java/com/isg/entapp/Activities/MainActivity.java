@@ -10,12 +10,13 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
+import com.actionbarsherlock.app.SherlockActivity;
 import com.isg.entapp.R;
 import com.isg.entapp.Utilities.Constants;
 
 import java.util.Locale;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends SherlockActivity implements View.OnClickListener {
     private Button kaz,rus;
 
     @Override
@@ -27,7 +28,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         kaz.setOnClickListener(this);
         rus.setOnClickListener(this);
 
-        ActionBar actionBar = getActionBar();
+        com.actionbarsherlock.app.ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
     }
 
@@ -61,5 +62,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Intent tabsIntent;
         tabsIntent = new Intent(MainActivity.this, MainTabActivity.class);
         startActivity(tabsIntent);
+        this.finish();
     }
 }
