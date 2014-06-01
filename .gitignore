@@ -1,12 +1,4 @@
-out/production
-out/res-cache
-out
-.idea
-.gitignore
-*.classpath
-*.project
-*.settings
 .gradle
-/build
+/local.properties
+/.idea/workspace.xml
 .DS_Store
-ENTapp/build/
