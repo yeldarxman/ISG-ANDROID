@@ -1,7 +1,7 @@
 package sdu.edu.entapp.ListAdapters.Read;
 
 /**
- * Created by yeldar on 13.07.13.
+ * Created by yerbolat on 17.11.13.
  */
 
 import android.app.Activity;
@@ -41,6 +41,8 @@ public class ReadSubjectSelectionListAdapter extends ArrayAdapter<String> {
             viewHolder.subjectName = (TextView) rowView.findViewById(R.id.subject_name);
             rowView.setTag(viewHolder);
         }
+
+
 
         ViewHolder holder = (ViewHolder) rowView.getTag();
         holder.subjectName.setText(subjects[position]);

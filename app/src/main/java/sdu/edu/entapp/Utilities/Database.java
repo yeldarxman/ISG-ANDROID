@@ -153,7 +153,7 @@ public class Database extends OrmLiteSqliteOpenHelper {
 
 // -------------    TEST RELATED STUFF --------------- \\
     /**
-     * Returns all test objects stored in the database
+     * Returns all kaz_lang_topic1 objects stored in the database
      * @return
      */
     public List<Test> getAllTests()
@@ -164,7 +164,7 @@ public class Database extends OrmLiteSqliteOpenHelper {
     }
 
     /**
-     * Insets new test object into the database
+     * Insets new kaz_lang_topic1 object into the database
      * @param test
      * @return
      */
@@ -176,7 +176,7 @@ public class Database extends OrmLiteSqliteOpenHelper {
     }
 
     /**
-     * Deletes all test objects from the database
+     * Deletes all kaz_lang_topic1 objects from the database
      */
     public void deleteAllTests()
     {

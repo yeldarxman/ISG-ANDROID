@@ -19,8 +19,9 @@ public class ReadTopicSelectionListAdapter extends ArrayAdapter<String> {
     private String[] topics;
 
     //view holder class
-    static class ViewHolder {
+    public static class ViewHolder {
         public TextView topicName;
+        public String subjectTopicName;
     }
 
     public ReadTopicSelectionListAdapter(Activity context, String[] topics) {
@@ -37,6 +38,7 @@ public class ReadTopicSelectionListAdapter extends ArrayAdapter<String> {
             rowView = inflater.inflate(R.layout.read_topic_list_item, null);
             ViewHolder viewHolder = new ViewHolder();
             viewHolder.topicName = (TextView) rowView.findViewById(R.id.read_topics_name);
+            viewHolder.subjectTopicName = "read"+(position+1);
             rowView.setTag(viewHolder);
 
             if(position==topics.length-1){

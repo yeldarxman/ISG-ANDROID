@@ -1,7 +1,7 @@
 package sdu.edu.entapp.Fragments.Read;
 
 /**
- * Created by yeldar on 13.07.13.
+ * Created by yerbolat on 13.11.13.
  */
 
 import android.app.Fragment;
@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import sdu.edu.entapp.Activities.ReadTopicSelectionActivity;
 import sdu.edu.entapp.ListAdapters.Read.ReadSubjectSelectionListAdapter;
 import sdu.edu.entapp.R;
@@ -25,7 +27,6 @@ public class ReadSubjectSelection extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         final ListView listview = (ListView) getActivity().findViewById(R.id.listview2);
-
         //load the subject objects
         this.loadSubjects();
 
@@ -38,7 +39,7 @@ public class ReadSubjectSelection extends Fragment {
             public void onItemClick(AdapterView<?> parent, final View view,
                                     int position, long id) {
 
-                if (position < 4){
+                if (position < 5){
                         final  Intent readTopicSelectionActivity = new Intent(getActivity().getApplicationContext(),ReadTopicSelectionActivity.class);
                         readTopicSelectionActivity.putExtra("subject",subjects[position]);
                         readTopicSelectionActivity.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

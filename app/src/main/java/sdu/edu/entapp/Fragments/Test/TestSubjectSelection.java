@@ -8,48 +8,52 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
+import android.widget.Toast;
+import sdu.edu.entapp.Activities.MainTabActivity;
 import sdu.edu.entapp.Activities.ReadTopicSelectionActivity;
 import sdu.edu.entapp.Activities.TestTopicSelectionActivity;
-
-
-
 import sdu.edu.entapp.ListAdapters.Test.TestSubjectSelectionListAdapter;
 import sdu.edu.entapp.Models.Subject;
 import sdu.edu.entapp.Models.Topic;
 import sdu.edu.entapp.Models.Test;
 import sdu.edu.entapp.R;
+import sdu.edu.entapp.Utilities.Constants;
 import sdu.edu.entapp.Utilities.Database;
 
 public class TestSubjectSelection extends Fragment {
-    private Database database;
-    private Subject[] subjects;
+    private String[] subjects;
+    private Subject[] realSubjects;
+    private double subjectProgress[];
+    private TestSubjectSelectionListAdapter adapter;
+    private ListView listview;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        final ListView listview = (ListView) getActivity().findViewById(R.id.listview2);
-
+        listview = (ListView) getActivity().findViewById(R.id.listview2);
         //load the subject objects
         this.loadSubjects();
 
         //final StableArrayAdapter adapter = new StableArrayAdapter(getActivity(), R.layout.test_subject_list_item, list);
-        final TestSubjectSelectionListAdapter adapter = new TestSubjectSelectionListAdapter(getActivity(), subjects);
+        adapter = new TestSubjectSelectionListAdapter(getActivity(), subjects);
+        adapter.subjectProgresses = subjectProgress;
         listview.setAdapter(adapter);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, final View view,
                                     int position, long id) {
-                if (position < 11){
+                if (position < 11) {
                     final Intent testTopicSelectionActivity = new Intent(getActivity().getApplicationContext(), TestTopicSelectionActivity.class);
-                    testTopicSelectionActivity.putExtra("test", subjects[position].getName());
+                    testTopicSelectionActivity.putExtra("test", subjects[position]);
+                    testTopicSelectionActivity.putExtra("englishSubjectName", realSubjects[position].englishName);
                     testTopicSelectionActivity.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(testTopicSelectionActivity);
                 }
@@ -60,7 +64,6 @@ public class TestSubjectSelection extends Fragment {
         });
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -68,62 +71,58 @@ public class TestSubjectSelection extends Fragment {
         return inflater.inflate(R.layout.read_list_fragment, container, false);
     }
 
-    public void loadSubjects(){
-        //initialize the database object
-        database = new Database(getActivity());
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(listview != null) {
+            //load the subject objects
+            this.loadSubjects();
+            //final StableArrayAdapter adapter = new StableArrayAdapter(getActivity(), R.layout.test_subject_list_item, list);
+            adapter = new TestSubjectSelectionListAdapter(getActivity(), subjects);
+            adapter.subjectProgresses = subjectProgress;
+            listview.setAdapter(adapter);
+        }
+    }
 
-        // if there are no subjects in the database then create them
-        if(database.getAllSubjects().size() == 0){
+    @Override
+    public void onStart() {
+        super.onStart();
+        this.loadSubjects();
+    }
 
-            System.out.println("Creating subjects from scratch");
+    public void loadSubjects() {
+        subjects = getResources().getStringArray((R.array.test_subjects_array));
+        realSubjects = new Subject[subjects.length];
+        subjectProgress = new double[realSubjects.length];
 
-            subjects = new Subject[11];
-
-            for(int i=0; i<11; i++){
-                subjects[i] = new Subject();
-                database.addSubject(subjects[i]);
+        int counter = 0;
+        for(String temp: subjects){
+            if(temp.isEmpty()){
+                break;
             }
+            Subject s = new Subject();
+            String names[] = temp.split(",");
+            s.name = names[0];
+            s.englishName = names[1];
+            realSubjects[counter++] = s;
+        }
 
+        counter = 0;
+        for(Subject subject: realSubjects){
+            subjects[counter++] = subject.name;
+        }
 
-            subjects[0].setName("Қазақ тілі");
-            subjects[1].setName("Қазақстан тарихы");
-            subjects[2].setName("Орыс тілі");
-            subjects[3].setName("Ағылшын тілі");
-            subjects[4].setName("Биология");
-            subjects[5].setName("Физика");
-            subjects[6].setName("Математика");
-            subjects[7].setName("География");
-            subjects[8].setName("Всемирная история");
-            subjects[9].setName("Қазақ әдебиеті");
-            subjects[10].setName("Химия");
-
-
-            for(int i=0; i<11; i++){
-                Topic variant = new Topic(subjects[i], true, "Variants");
-                database.addTopic(variant);
-
-                for(int k=0; k<15; k++){
-                    database.addTest(new Test("Test" + (k+1), variant));
-                }
-
-                for (int j=0; j<5; j++){
-                    Topic topic = new Topic(subjects[i], false, "Topic" + (j+1));
-                    database.addTopic(topic);
-
-                    for(int k=0; k<15; k++){
-                        database.addTest(new Test("Test" + (k+1), topic));
-                    }
-                }
+        //SharedPreferences
+        SharedPreferences settings = getActivity().getSharedPreferences(Constants.PREFS_NAME, 0);
+        //read from shared preferences
+        counter = 0;
+        for(Subject subject: realSubjects){
+            if(subject != null){
+                System.out.println("READING: " + subject.name);
+                String progress = settings.getString(subject.name, "0");
+                double doubleProgress = Double.parseDouble(progress);
+                subjectProgress[counter++] = doubleProgress;
             }
-
-            for(int i=0; i<11; i++){
-                database.subjectRuntimeDAO().update(subjects[i]);
-            }
-
-        } else {
-            System.out.println("Loading subjects from database");
-            subjects = new Subject[11];
-            subjects = database.getAllSubjects().toArray(subjects);
         }
     }
 }

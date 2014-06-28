@@ -5,7 +5,7 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.ForeignCollectionField;
 
 /**
- * Created by yeldar on 13.07.13.
+ * Created by yerbolat on 13.12.13.
  */
 public class Topic {
 

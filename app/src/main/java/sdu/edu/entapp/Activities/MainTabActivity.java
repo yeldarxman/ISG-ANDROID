@@ -4,6 +4,7 @@ package sdu.edu.entapp.Activities;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabHost.TabContentFactory;
+import android.widget.Toast;
 
 
 import sdu.edu.entapp.Fragments.More.Settings;
@@ -29,6 +31,8 @@ public class MainTabActivity extends Activity implements TabHost.OnTabChangeList
     private HashMap mapTabInfo = new HashMap();
     private TabInfo mLastTab = null;
     private boolean backButtonPressed = false;
+    public boolean testTabRecall = false;
+
 
     public class TabInfo {
         private String tag;
@@ -86,7 +90,6 @@ public class MainTabActivity extends Activity implements TabHost.OnTabChangeList
         setContentView(R.layout.main_tab_activity);
         // Step 2: Setup TabHost
         initialiseTabHost(savedInstanceState);
-
     }
 
     /**
@@ -108,8 +111,7 @@ public class MainTabActivity extends Activity implements TabHost.OnTabChangeList
 
         getActionBar().setTitle(((TabInfo)this.mapTabInfo.get("test")).getTag());
         // Default to first tab
-        this.onTabChanged("Tab1");
-        //
+        this.onTabChanged("test");
         mTabHost.setOnTabChangedListener(this);
     }
 
@@ -184,10 +186,15 @@ public class MainTabActivity extends Activity implements TabHost.OnTabChangeList
     @Override
     public void onResume(){
         mTabHost.setCurrentTab(getSharedPreferences(Constants.PREFS_NAME, 0)
-                .getInt("tab", 0));
+                .getInt("tab", mTabHost.getCurrentTab()));
         super.onResume();
         backButtonPressed = false;
         System.out.println("onResume is called  ");
+
+        TestSubjectSelection myFragment = (TestSubjectSelection)getFragmentManager().findFragmentByTag("test");
+        if (myFragment != null && myFragment.isVisible()) {
+            myFragment.loadSubjects();
+        }
     }
 
     public void setLanguage(String lg){
@@ -219,10 +226,12 @@ public class MainTabActivity extends Activity implements TabHost.OnTabChangeList
     @Override
     public void onBackPressed() {
         backButtonPressed = true;
+        testTabRecall = true;
         //SharedPreferences
         SharedPreferences settings = getSharedPreferences(Constants.PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putInt("tab", 0);
+        editor.putInt("tab", mTabHost.getCurrentTab());
+        System.out.println(mTabHost.getCurrentTab()+"korsetwi");
         // Commit the edits!
         editor.commit();
         super.onBackPressed();

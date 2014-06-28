@@ -14,6 +14,7 @@ import android.widget.TextView;
 import java.util.Locale;
 import sdu.edu.entapp.Activities.MainTabActivity;
 import sdu.edu.entapp.ListAdapters.More.SettingsListAdapter;
+import sdu.edu.entapp.Models.Test;
 import sdu.edu.entapp.R;
 import sdu.edu.entapp.Utilities.Constants;
 
@@ -72,7 +73,7 @@ public class Settings extends android.app.Fragment {
                     builder.setMessage(R.string.dialog_erase_results)
                             .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    // FIRE ZE MISSILES!
+                                    clearResults();
                                 }
                             })
                             .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -144,6 +145,54 @@ public class Settings extends android.app.Fragment {
         SharedPreferences settings = getActivity().getSharedPreferences(Constants.PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString("language", lg);
+        // Commit the edits!
+        editor.commit();
+    }
+
+    public void clearResults(){
+        String tempSubjects[] = getResources().getStringArray(R.array.test_subjects_array);
+        String tempTopics[] = getResources().getStringArray(R.array.test_topics_array);
+
+        String subjects[] = new String[tempSubjects.length];
+        String topics[] = new String[tempTopics.length];
+
+        int counter = 0;
+        for(String temp: tempSubjects){
+            if(temp.isEmpty()){
+                break;
+            }
+            System.out.println(temp);
+            String names[] = temp.split(",");
+            subjects[counter++] = names[0];
+        }
+
+        counter = 0;
+        for(String temp: tempTopics){
+            if(temp.isEmpty()){
+                break;
+            }
+            System.out.println(temp);
+            String names[] = temp.split(",");
+            topics[counter++] = names[0];
+        }
+
+        //clear shared preferences (only for the selected language)
+        //SharedPreferences
+        SharedPreferences settings = getActivity().getSharedPreferences(Constants.PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+
+        counter = 0;
+        for(String subject: subjects){
+            editor.remove(subject);
+
+            for(String topic:topics){
+                if(topic != null && !topic.isEmpty()) {
+                    String variant = subject + topic;
+                    editor.remove(variant);
+                }
+            }
+        }
+
         // Commit the edits!
         editor.commit();
     }

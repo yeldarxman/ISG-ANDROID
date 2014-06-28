@@ -25,7 +25,18 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:text="@string/kaz_math"
+            android:layout_weight="4"
             android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:id="@+id/test_variant_result"
+            android:textSize="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="@string/kaz_math"
+            android:layout_weight="1"
+            android:layout_gravity="right"
             />
 
 

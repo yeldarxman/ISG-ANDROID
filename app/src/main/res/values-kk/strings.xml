@@ -44,22 +44,57 @@
     <string name="read">Оқу</string>
     <string name="settings">Қосымша</string>
 
-    <array name="read_topics_array">
-        <item>Тақырып1</item>
-        <item>Тақырып2</item>
-        <item>Тақырып3</item>
-        <item>Тақырып4</item>
-        <item>Тақырып5</item>
+    <array name="read_kazakh_lang_kz">
+        <item>Зат есім</item>
+        <item>Сын есім</item>
+        <item>Сан есім</item>
+        <item>Етістік</item>
+        <item>Сөйлем</item>
         <item></item>
-
     </array>
-    <array name="test_topics_array">
-        <item>Нұсқа1</item>
-        <item>Нұсқа2</item>
-        <item>Нұсқа3</item>
-        <item>Нұсқа4</item>
-        <item>Нұсқа5</item>
 
+    <array name="read_russian_lang">
+        <item>Имя существительное</item>
+        <item>Имя прилагательное</item>
+        <item>Имя числительное</item>
+        <item>Глагол</item>
+        <item>Предложение</item>
+        <item></item>
+    </array>
+
+    <array name="read_kazakh_hist_kz">
+        <item>Ерте замандағы Қазақстан</item>
+        <item>Қазақстан орта ғасырларда</item>
+        <item>Жаңа замандағы Қазақстан (XVIII –XX ғғ.)</item>
+        <item>Қазіргі замандағы Қазақстан</item>
+        <item>Тәуелсіз Қазақстан</item>
+        <item></item>
+    </array>
+
+    <array name="read_eng_lang">
+        <item>Nouns</item>
+        <item>The adjective</item>
+        <item>The numeral</item>
+        <item>The Verb</item>
+        <item>Conditional sentences</item>
+        <item></item>
+    </array>
+
+    <array name="test_topics_array">
+        <item>Нұсқа1,variant1</item>
+        <item>Нұсқа2,variant2</item>
+        <item>Нұсқа3,variant3</item>
+        <item>Нұсқа4,variant4</item>
+        <item>Нұсқа5,variant5</item>
+        <item></item>
+    </array>
+
+    <array name="test_subjects_array">
+        <item>Қазақ тілі,kk_kaz_lang</item>
+        <item>Қазақстан тарихы,kk_kaz_history</item>
+        <item>Орыс тілі,rus_lang</item>
+        <item>Ағылшын тілі,kk_eng_lang</item>
+        <item>Биология,kk_biology</item>
     </array>
 
 

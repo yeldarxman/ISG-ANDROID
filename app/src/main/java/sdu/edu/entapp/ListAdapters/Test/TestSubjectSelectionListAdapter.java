@@ -1,7 +1,7 @@
 package sdu.edu.entapp.ListAdapters.Test;
 
 /**
- * Created by yeldar on 13.07.13.
+ * Created by yerbolat on 13.07.13.
  */
 
 import android.app.Activity;
@@ -13,12 +13,14 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import sdu.edu.entapp.Models.Subject;
+import javax.security.auth.Subject;
+
 import sdu.edu.entapp.R;
 
-public class TestSubjectSelectionListAdapter extends ArrayAdapter<Subject> {
+public class TestSubjectSelectionListAdapter extends ArrayAdapter<String> {
     private final Activity context;
-    private Subject[] subjects;
+    private String[] subjects;
+    public double[] subjectProgresses;
 
     //view holder class
     static class ViewHolder {
@@ -26,10 +28,9 @@ public class TestSubjectSelectionListAdapter extends ArrayAdapter<Subject> {
         public TextView percentage;
         public ProgressBar progressBar;
         public ImageView subjectImage;
-
     }
 
-    public TestSubjectSelectionListAdapter(Activity context, Subject[] subjects) {
+    public TestSubjectSelectionListAdapter(Activity context, String[] subjects) {
         super(context, R.layout.test_subject_list_item, subjects);
         this.context = context;
         this.subjects = subjects;
@@ -50,11 +51,9 @@ public class TestSubjectSelectionListAdapter extends ArrayAdapter<Subject> {
         }
 
         ViewHolder holder = (ViewHolder) rowView.getTag();
-        Subject subject = subjects[position];
-        holder.subjectName.setText(subject.getName());
-        holder.percentage.setText(subject.getProgress() + "");
-        holder.progressBar.setProgress((int)subject.getProgress());
-        holder.subjectImage.setImageResource(0);
+        holder.subjectName.setText(subjects[position]);
+        holder.percentage.setText(subjectProgresses[position] + "");
+        holder.progressBar.setProgress((int)subjectProgresses[position]);
 
         switch (position){
             case 0:
@@ -72,24 +71,7 @@ public class TestSubjectSelectionListAdapter extends ArrayAdapter<Subject> {
             case 4:
                 holder.subjectImage.setImageResource(R.drawable.kaz_history_icon);
                 break;
-            case 5:
-                holder.subjectImage.setImageResource(R.drawable.math_icon);
-                break;
-            case 6:
-                holder.subjectImage.setImageResource(R.drawable.math_icon);
-                break;
-            case 7:
-                holder.subjectImage.setImageResource(R.drawable.math_icon);
-                break;
-            case 8:
-                holder.subjectImage.setImageResource(R.drawable.math_icon);
-                break;
-            case 9:
-                holder.subjectImage.setImageResource(R.drawable.math_icon);
-                break;
-            case 10:
-                holder.subjectImage.setImageResource(R.drawable.math_icon);
-                break;
+
         }
 
         return rowView;

@@ -1,7 +1,7 @@
 package sdu.edu.entapp.ListAdapters.Test;
 
 /**
- * Created by yeldar on 13.07.13.
+ * Created by yerbolat on 20.11.13.
  */
 
 import android.app.Activity;
@@ -18,10 +18,12 @@ import sdu.edu.entapp.R;
 public class TestTopicSelectionListAdapter extends ArrayAdapter<String> {
     private final Activity context;
     private String[] topics;
+    public int[] correctAnswersCounts;
 
     //view holder class
     static class ViewHolder {
         public TextView topicName;
+        public TextView correctAnswers;
     }
 
     public TestTopicSelectionListAdapter(Activity context, String[] topics) {
@@ -38,9 +40,10 @@ public class TestTopicSelectionListAdapter extends ArrayAdapter<String> {
             rowView = inflater.inflate(R.layout.test_topic_list_item, null);
             ViewHolder viewHolder = new ViewHolder();
             viewHolder.topicName = (TextView) rowView.findViewById(R.id.test_topics_name);
+            viewHolder.correctAnswers = (TextView) rowView.findViewById(R.id.test_variant_result);
             rowView.setTag(viewHolder);
 
-            if(position==topics.length){
+            if(position==topics.length-1){
                 Log.d("MyDiploma", "topics length"+ topics.length);
                 rowView.setLayoutParams(new AbsListView.LayoutParams(0,0));
             }
@@ -48,6 +51,9 @@ public class TestTopicSelectionListAdapter extends ArrayAdapter<String> {
 
         ViewHolder holder = (ViewHolder) rowView.getTag();
         holder.topicName.setText(topics[position]);
+        if(position < correctAnswersCounts.length) {
+            holder.correctAnswers.setText(""+correctAnswersCounts[position]);
+        }
         return rowView;
     }
 }
